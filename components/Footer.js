@@ -4,7 +4,7 @@ const FooterStyles = styled.div`
   
   .tonsai-trees {
     margin-top: var(--space-between-components);
-    margin-bottom: -8px;
+    margin-bottom: -9px;
     width: 100%;
   }
   .footer-wrapper {
