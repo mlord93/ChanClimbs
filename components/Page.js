@@ -26,7 +26,9 @@ const GlobalStyles = createGlobalStyle`
         box-sizing: inherit;
     }
     body {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: 'Lato', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 100;
+        font-style: normal;
         background-color: var(--light-sand);
         background-image: url("/static/Tonsai_mtn.png");
         background-attachment: fixed;

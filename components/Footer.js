@@ -4,7 +4,7 @@ const FooterStyles = styled.div`
   
   .tonsai-trees {
     margin-top: var(--space-between-components);
-    margin-bottom: -9px;
+    margin-bottom: -15px;
     width: 100%;
   }
   .footer-wrapper {
@@ -69,10 +69,10 @@ export default function Footer() {
       <div className="footer-wrapper">
         <div className="side-column">
           <div>
-            Contact Us
+            Contact Me
             <br />
-            <a className="email-us" href="mailto:tonsaiwear@gmail.com">
-              tonsaiwear@gmail.com
+            <a className="email-us" href="mailto:cchandrapunth@gmail.com">
+              cchandrapunth@gmail.com
             </a>
           </div>
         </div>
@@ -87,15 +87,15 @@ export default function Footer() {
                 {' '}
               </a>
               <a
-                href="https://www.instagram.com/tonsaiwear/"
+                href="https://www.instagram.com/chan_climbs/"
                 aria-label="Follow on Instagram"
                 className="fa fa-instagram"
               >
                 {' '}
               </a>
               <a
-                href="mailto:tonsaiwear@gmail.com"
-                aria-label="Email Us"
+                href="mailto:cchandrapunth@gmail.com"
+                aria-label="Email Me"
                 className="fa fa-regular fa-envelope"
               >
                 {' '}
@@ -104,7 +104,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="side-column">
-          <div className="logo">© 2023 Tonsai</div>
+          <div className="logo">Updated 2024</div>
         </div>
       </div>
     </FooterStyles>

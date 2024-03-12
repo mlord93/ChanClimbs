@@ -26,11 +26,12 @@ const IndexStyles = styled.div`
   .coming-soon {
     position: absolute;
     top: 50%; 
-    left: 50%; 
+    left: 25%; 
+    width: 50vw;
     transform: translate(-50%, -50%); 
     text-align: center;
     color: white;
-    font-size: 8rem;
+    font-size: 4rem;
     font-weight: bold;
     font-family: var(--coming-soon-font);
     font-style:italic;
@@ -91,7 +92,7 @@ const IndexStyles = styled.div`
   .about-us-middle {
     justify-self: center;
     grid-area: text;
-    width: 80%;
+    width: 50%;
   }
 
   .side-image {
@@ -183,27 +184,33 @@ export default function IndexPage() {
       <div className="hero-container">
         <img
           className="hero-image"
-          src="/static/climber.jpg"
+          src="/static/chan's_back.webp"
           alt="Climbing at Red Rocks"
         />
-        <img
-          className="logo"
-          src="/static/Logo_white.png"
-          alt="Logo Image"
-        />
-        <div className="coming-soon">Launching Soon</div>
+        <div className="coming-soon">
+          Get<br />
+          Women<br />
+          to<br />
+          the<br />
+          Top
+        </div>
       </div>
 
       <div className="page-spacing">
 
         {aboutUs.map((section, i) => (
-          <div key={i} className={i % 2 == 0 ? "background-dark" : ""}>
+          <div key={i} className={i % 2 == 1 ? "background-dark" : ""}>
 
             <h1 className="about-us-title" > {section.label}</h1>
             <div className="about-us-wrapper">
               {renderSideImage(section.imageLeft, section.captionLeft, "left")}
               <div className="about-us-middle">
-                <div className="about-us-text">{section.content}</div>
+                <div className="about-us-text">{section.content.split('\n').map((line, index, array) => (
+                  <div key={index}>
+                    {line}
+                    {index < array.length - 1 && <br />}
+                  </div>
+                ))}</div>
               </div>
               {renderSideImage(section.imageRight, section.captionRight, "right")}
             </div>
@@ -211,7 +218,7 @@ export default function IndexPage() {
         ))
         }
 
-        <Carousel title="#ConfidentComfortCute">
+        <Carousel title="Chan's Managment Blog">
           {blogItems.map((post, i) => (
             <div className="blog-post" key={i}>
               <h3 className="blog-text">{post.title}</h3>
